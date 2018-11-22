@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class May extends Component {
   render() {
+      //get the properties of parent module
+      console.log(this.props);
+     //we want to access to variable name and variable age from the parent module
+      const {name, age} = this.props;
     return (
       <div className="App">
-        <div>Name: May</div>
-        <div>Age: 26</div>
+        <div>Name: {name}</div>
+        <div>Age: {age}</div>
       </div>
     );
   }
 }
 
-export default App;
+export default May;
