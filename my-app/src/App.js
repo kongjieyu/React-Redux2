@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import May from './May';
 
 class App extends Component {
+  //state: List format
+  state = {
+    information : [
+      {name: "May", age: "27", nationality: "chinese", id:1 },
+      {name: "Eric", age: "30", nationality: "US", id:2 },
+      {name: "Tom", age: "301", nationality: "US", id: 3 }
+    ]
+  }
   render() {
+    //pass the state to the child component 
     return (
       <div className="App">
         <h1>Hi May</h1>
-        <May name="May" age="27" />
+          <May information={this.state.information} />
       </div>
     );
   }
