@@ -19,7 +19,16 @@ class App extends Component {
     let originalInformation = [...this.state.information, infor]
     this.setState({
       information: originalInformation
-
+    })
+  }
+  //delete data
+  deleteUser = (id) => {
+    console.log(id);
+    let information = this.state.information.filter (information => {
+      return information.id !== id;
+    }) 
+    this.setState({
+      information: information
     })
   }
   render() {
@@ -29,7 +38,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi May</h1>
-          <May information={this.state.information} />
+          <May deleteUser={this.deleteUser} information={this.state.information} />
           <AppUser addUser={this.addUser}/>
       </div>
     );

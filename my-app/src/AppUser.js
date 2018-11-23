@@ -26,6 +26,7 @@ class AppUser extends Component {
   render() {
     //pass the state to the child component 
     //onChange function is gonna update the state
+    console.log(this.props);
     return (
       <div className="AppUser" onSubmit={this.handleSummit}>
         <form action="">
