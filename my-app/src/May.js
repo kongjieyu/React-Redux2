@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class May extends Component {
-  render() {
+//functional(UI) component: cannot use this.prop(Container Component) 
+const May = (props) => {
+
       //get the properties of parent module
       //console.log(this.props);
      //we want to access to variable name and variable age from the parent module
      //get the List of information from the parent Component
-     const {information} = this.props;
+     const {information} = props;
      //initialize a new variable and 
      //map method in JS : taking an array and map that array to a new array
      const informationList = information.map(information=>{
@@ -27,7 +28,7 @@ class May extends Component {
 
         </div>
     )
-  }
+
 }
 
 export default May
