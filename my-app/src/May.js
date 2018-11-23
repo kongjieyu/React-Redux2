@@ -10,17 +10,34 @@ const May = (props) => {
      const {information} = props;
      //initialize a new variable and 
      //map method in JS : taking an array and map that array to a new array
-     const informationList = information.map(information=>{
-         return (
-             <div className="May" key={information.id}>
-            
-            <div>Name: {information.name}</div>
-            <div>Age: {information.age}</div>
-            <div>Age: {information.nationality}</div>
-        </div>
-         )
-        
-     })
+
+    //-------------------
+    //  const informationList = information.map(information=>{
+    //      if (information.age>20) {
+    //         return (
+    //             <div className="May" key={information.id}>
+                
+    //             <div>Name: {information.name}</div>
+    //             <div>Age: {information.age}</div>
+    //             <div>Age: {information.nationality}</div>
+    //         </div>
+    //         )
+    //      } else {
+    //          return null
+    //      }
+    //  })
+    //-------------------
+
+    const informationList = information.map (information => {
+        //condition ? (): ()
+        return information.age >20 ? (
+            <div className="May" key={information.id}>      
+                 <div>Name: {information.name}</div>
+                 <div>Age: {information.age}</div>
+                 <div>Age: {information.nationality}</div>
+             </div>
+        ): null;
+    });
       //const {name, age, nationality} = this.props;
     return (
         <div className = "information-list">

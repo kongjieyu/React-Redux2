@@ -7,7 +7,8 @@ class App extends Component {
     information : [
       {name: "May", age: "27", nationality: "chinese", id:1 },
       {name: "Eric", age: "30", nationality: "US", id:2 },
-      {name: "Tom", age: "301", nationality: "US", id: 3 }
+      {name: "Tom", age: "34", nationality: "US", id: 3 },
+      {name: "Jenny", age: "14", nationality: "US", id: 4 }
     ]
   }
   render() {
