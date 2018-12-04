@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import May from './May';
+import Addmay from './Addmay';
 
 class App extends Component {
   //state: List format
@@ -11,12 +12,17 @@ class App extends Component {
       {name: "Jenny", age: "14", nationality: "US", id: 4 }
     ]
   }
+  addMay = (may) => {
+    console.log(may);
+
+  }
   render() {
     //pass the state to the child component 
     return (
       <div className="App">
         <h1>Hi May</h1>
           <May information={this.state.information} />
+          <Addmay addMay={this.addMay}/>
       </div>
     );
   }
