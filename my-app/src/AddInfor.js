@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Addmay extends Component {
+class AddInfor extends Component {
     state = {
         name: null,
         age: null,
@@ -13,8 +13,8 @@ class Addmay extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state + '1');
-        this.props.addMay(this.state);
+        //console.log(this.state + '1');
+        this.props.addInfor(this.state);
     }
     render(){
 
@@ -34,4 +34,4 @@ class Addmay extends Component {
     }
 }
 
-export default Addmay
+export default AddInfor
