@@ -15,6 +15,10 @@ class App extends Component {
   addInfor = (infor) => {
     console.log(infor);
     infor.id = Math.random();
+    let newInformation = [...this.state.information, infor]
+    this.setState({
+      information: newInformation
+    })
 
   }
   render() {
