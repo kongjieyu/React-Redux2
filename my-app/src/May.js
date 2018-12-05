@@ -1,4 +1,5 @@
 import React from 'react';
+import './infor.css';
 
 //functional(UI) component: cannot use this.prop(Container Component) 
 const May = (props) => {
