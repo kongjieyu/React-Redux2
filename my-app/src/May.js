@@ -7,7 +7,7 @@ const May = (props) => {
       //console.log(this.props);
      //we want to access to variable name and variable age from the parent module
      //get the List of information from the parent Component
-     const {information} = props;
+     const {information, deleteInfor} = props;
      //initialize a new variable and 
      //map method in JS : taking an array and map that array to a new array
 
@@ -35,6 +35,7 @@ const May = (props) => {
                  <div>Name: {information.name}</div>
                  <div>Age: {information.age}</div>
                  <div>Age: {information.nationality}</div>
+                 <button onClick={() => {deleteInfor(information.id)}}>Delete</button>
              </div>
         ): null;
     });

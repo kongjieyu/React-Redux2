@@ -19,14 +19,22 @@ class App extends Component {
     this.setState({
       information: newInformation
     })
-
+  }
+  deleteInfor = (id) => {
+    console.log(id)
+    let newInformationAfterDelete = this.state.information.filter(information => {
+      return information.id !== id
+    });
+    this.setState({
+      information: newInformationAfterDelete
+    })
   }
   render() {
     //pass the state to the child component 
     return (
       <div className="App">
         <h1>Hi May</h1>
-          <May information={this.state.information} />
+          <May deleteInfor={this.deleteInfor} information={this.state.information} />
           <AddInfor addInfor={this.addInfor}/>
       </div>
     );
