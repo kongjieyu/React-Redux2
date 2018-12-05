@@ -29,6 +29,15 @@ class App extends Component {
       information: newInformationAfterDelete
     })
   }
+  componentWillMount(){
+    console.log('component will mount')
+  }
+  componentDidMount(){
+    console.log('component mounted')
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log('component updated');
+  }
   render() {
     //pass the state to the child component 
     return (
